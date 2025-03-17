@@ -1,0 +1,52 @@
+{
+  "name": "QbslearningATS",
+  "version": "1.0.12",
+  "description": "this application manage login tracking",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "repository": "https://github.com/diwakar2489/qbs_attendance_tracker_release",
+  "publish": {
+    "provider": "github",
+    "releaseType": "release"
+  },
+  "build": {
+    "appId": "com.qbsconnect.qbslearning",
+    "productName": "QbslearningATS",
+    "copyright": "© 2025 Qbslearning",
+    "directories": {
+      "output": "dist"
+    }
+  },
+
+  "win": {
+    "target": "nsis",
+    "icon": "app/assets/img/favicon.png"
+  },
+  "mac": {
+    "target": "dmg",
+    "icon": "assets/img/favicon.png"
+  },
+  "linux": {
+    "target": "AppImage",
+    "icon": "assets/img/favicon.png"
+  },
+  "keywords": [],
+  "author": "Hive Developer",
+  "license": "ISC",
+  "dependencies": {
+    "auto-launch": "^5.0.6",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "electron-log": "^5.3.0",
+    "electron-store": "^7.0.3",
+    "electron-updater": "^6.3.9",
+    "keytar": "^7.9.0"
+  },
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "electron-builder": "^25.1.8"
+  }
+}
