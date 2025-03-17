@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Dashboard</title>
+  <link href="../../assets/Included/css/bootstrap.css" rel="stylesheet"/>
+  <link href="../../assets/Included/css/icon.css" rel="stylesheet"/>
+  <link href="../../assets/Included/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="user_main_container">
+		<div class="loading_wrp" id="main-loader">
+			<img src="../../assets/img/loader.png">
+		</div>
+		<main id="dash_content_area">
+		
+			<div id="sidebar">
+				<nav id="sidebarMenu" class="d-md-block sidebar">
+					<div class="position-sticky">
+						<div class="text-center">
+							<a href="" ><img src="../../assets/Included/images/logo.png" alt="logo" class="dash_company_logo"/></a>
+						</div>
+					
+						<div class="profile_detail">
+								<div class="profile_img_wrp">
+									<div class="pro_img profile_upload_wrp">
+										<img src="../../assets/Included/images/usericon_1.png" alt="user">
+									</div>
+									<div class="pro_detail">
+										<div class="pro_title"><span id="sidebar_profile"></span> <sup style="color: #0078b5; font-weight: 600;">[<span id="emp_code"></span>]</sup></div>
+										<div class="pro_sub_head" id="role_name"></div>
+										<div class="pro_sub_head"><i class="icon icon-apartment"></i> <span id="dept_name"></span> <i class="icon icon-map-marker"></i> <span id="working_location"> </span></div>
+                    <div class="pro_sub_head"><i class="icon icon-clock"></i> <span id="shift_time"></span></div>
+									</div>
+								</div>
+								<div class="pro_wrp">
+									
+									<div class="pro_blk">
+										<div class="pro_heading">Skills</div>
+										<div class="pro_sub_head">
+											<i class="icon icon-book mr05"></i> 
+											<span id="skill_name"></span>
+										</div>
+									</div>
+									<div class="pro_blk">
+										<div class="pro_heading">Email</div>
+										<div class="pro_sub_head">
+											<i class="icon icon-envelope mr05"></i> 
+											<span id="emp_email"></span>
+										</div>
+									</div>
+									<div class="pro_blk">
+										<div class="pro_heading">Date of Joining</div>
+										<div class="pro_sub_head">
+											<i class="icon icon-calendar-full mr05"></i> 
+                     						<span id="emp_dob"></span>
+										</div>
+									</div>
+									<div class="pro_blk">
+										<div class="pro_heading">System Role</div>
+										<div class="pro_sub_head">
+											<i class="icon icon-cog mr05"></i> 
+											<span id="system_role"></span>
+										</div>
+									</div>
+									<div class="pro_blk">
+										<div class="pro_heading">Reporting Manager 2</div>
+										<div class="pro_sub_head" id="emp_reporting_manager"></div>
+									</div>
+									<div class="pro_blk mb05 mt05">
+										<span class="success_mgs" id="logoutMsg"></span>
+										
+										<form id="logoutForm">
+											<input type="hidden" id="user_id" value="" />
+											<input type="hidden" id="user_name" value="" />
+											<input type="hidden" id="shift" value="" />
+											<button class="btn_2" type="submit" id="logoutButton"><i class="icon icon-loading2 spin loader_icon" id="btn-loader"></i>Logout</button>
+										</form>
+										
+									</div>
+								</div>
+							</div>
+					</div>
+				</nav>
+			
+			</div>
+			<div id="content_area">
+				<div class="row_bg">
+				<div class="float-end">
+					<div class="pro_heading text-right"> <span id="idle-time">00:00:00</span>  : <b>System Idle Time</b></div>
+					<div class="pro_heading text-right"> <span id="idle-state">active</span> : <b>System Idle Status</b></div>
+					<div class="pro_heading text-right"><span id="internet-status">online</span></div>
+					<!-- <div class="pro_heading text-right"> <span id="idle-hours">0</span> : <b>System Idle Hours</b></div> -->
+				</div>
+				
+				<div class="page-header"><h1><span id="profile"></span></h1></div>
+					<div class="row mb15">
+						<div class="col-lg-4">
+							<div class="widget style1 lazur-bg">
+								<div class="row">
+									<div class="col-4">
+										<img style="height: 56px;" src="../../assets/Included/images/login.png" alt="">
+									</div>
+									<div class="col-8 text-right" >
+										<span>Login </span>
+										<h2 class="font-bold"></h2>
+										<p class="font-bold" id="first_login"></p>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="widget style1 yellow-bg">
+								<div class="row">
+									<div class="col-4">
+										<img style="height: 56px;" src="../../assets/Included/images/logout.png" alt="">
+									</div>
+									<div class="col-8 text-right">
+										<span>Logout </span>
+										<h2 class="font-bold"></h2>
+										<p class="font-bold" id="last_logout"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="widget style1 navy-bg">
+								<div class="row">
+									<div class="col-4">
+										<img style="height: 56px;" src="../../assets/Included/images/hours.png" alt="">
+									</div>
+									<div class="col-8 text-right">
+										<span>Total Work Hours</span>
+										<h2 class="font-bold"> </h2>
+										<p class="font-bold" id="totalWorkingHrs"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="box_white mb20">
+						<div class="box_heading">
+							Today Login Activities
+						<!-- <a class="btn_3 float-end" target="_blank" id="connect_link" >GO TO qbsconnect</a> -->
+						</div>
+						<div class="box_content">
+							<table class="table-scroll small-first-col" >
+							<thead>
+								<tr>
+									<th>Sr.No</th>
+									<th>Start Time</th>
+									<th>End Time</th>	
+									<th>Total Hours	</th>	
+								</tr>
+							</thead>
+							
+							<tbody class="body-half-screen" id="attendanceBody">
+								
+								
+								
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</main>
+
+	</div>
+
+
+  <script src="./dashboard-render.js"></script>
+ 
+</body>
+</html>

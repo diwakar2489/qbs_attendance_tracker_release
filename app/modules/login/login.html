@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
+
+
+  <title>Login</title>
+  <link href="../../assets/Included/css/bootstrap.css" rel="stylesheet"/>
+  <link href="../../assets/Included/css/icon.css" rel="stylesheet"/>
+  <link href="../../assets/Included/css/login.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="login_container">
+    <div class="left_panel_login">
+      <div class="loginbg_blk">
+        <img src="../../assets/Included/images/login.svg" alt=""/> 
+      </div>
+    </div>
+    <div class="right_panel_login">
+      <div class="login_wrapper">
+        <div class="login_blk">
+          <div id="login">
+            <form id="loginForm">
+              <div class="login_head">
+                <div class="logo_blk float-start"><img src="../../assets/Included/images/logo.png"/></div>
+                
+              </div>
+              
+              <div class="formblk mb20">
+                <label class="form-label">Email or Employee Code</label>
+                <div class="form-input">
+                  <input type="text" id="email"  required class="form-control" placeholder="Enter your mail or Employee Code">
+                </div>
+              </div>
+              <div class="formblk mb10">
+                <label class="form-label">Password</label>
+                <div class="form-input">
+                  <input type="password" id="password" required class="form-control" placeholder="Enter your  Password">
+                  <span class="icon_wrp" id="togglePassword">
+                      <i class="icon icon-eye" id="eyeIcon"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="formblk mb10">
+                <div style="color: green; font-weight: bold;" id="success-message"></div>
+                <div style="color: red; font-weight: bold;" id="danger-message"></div>
+              </div>
+              <div class="formblk mb10">
+              <!-- <a class="forgot_password" href="#">Forgot Password ?</a> -->
+              </div>
+              <div class="formblk mb10">
+                <button class="button_login" id="loginBtn" type="button"><i class="icon icon-loading2 spin loader_icon" id="btn-loader"></i>Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="copy"> @2024 Hive. All rights reserved.</div>
+      </div>
+      
+    </div>
+  </div>
+  <script src="./login_renderer.js"></script>
+</body>
+</html>
